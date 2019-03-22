@@ -23,8 +23,8 @@ namespace Attendify
             SetContentView(Resource.Layout.activity_main);
 
 
-            ImageView logo = FindViewById<ImageView>(Resource.Id.logo);
-            logo.SetImageURI(Android.Net.Uri.Parse(Helper.logoPath));
+            //ImageView logo = FindViewById<ImageView>(Resource.Id.logo);
+            //logo.SetImageURI(Android.Net.Uri.Parse(Helper.logoPath));
 
             TextView emailLabel = FindViewById<TextView>(Resource.Id.emailLabel);
             TextView passwordLabel = FindViewById<TextView>(Resource.Id.passwordLabel);
@@ -51,18 +51,19 @@ namespace Attendify
 
                     errorLabel.Text = res["response"];
 
-                    if(res["response"] == "Successful")
+                    if(res["response"] == "Success")
                     {
                         string token = res["token"];
-                        Console.Out.WriteLine("\n\n\n\n TOKEN:" + token + "\n\n\n\n");
                         JsonValue user = await Helper.parseJwtAsync(token);
-                        string user_id = user["user_id"];
-                        Console.Out.WriteLine(user_id);
-                        //save to local storage
-                        //decrypt
-                        //use user_id
-                        //make a get request to get the status
-                    }
+                        string student_id = user["student_id"];
+                        emailInput.Text = "";
+                        passwordInput.Text = "";
+                        Intent intent = new Intent(this, typeof(Properties.MenuActivity));
+                        intent.PutExtra("student_id",student_id);
+                        intent.PutExtra("token",token);
+                        StartActivity(intent);
+
+                    }   
                     else
                     { 
                         errorLabel.Text = res["response"];

@@ -71,15 +71,5 @@
         android:layout_marginTop="15.0dp"
         android:layout_marginBottom="15.0dp" 
 	 />
-    <ImageView
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="385.0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/logo"
-        android:layout_marginTop="15.0dp"
-        android:layout_marginBottom="15.0dp"
-        android:layout_marginRight="320.5dp"
-        android:layout_centerHorizontal="true" 
-	/>
 
 </RelativeLayout>

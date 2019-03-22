@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="53.5dp"
+        android:id="@+id/textView1"
+        android:gravity="center"
+        android:layout_marginBottom="15.0dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="53.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/button1"
+        android:text="Register Attendance"
+        android:layout_marginBottom="8.0dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55.5dp"
+        android:id="@+id/button2"
+        android:text="Show Attendances" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50.5dp"
+        android:id="@+id/status"
+        android:layout_marginTop="18.0dp"
+        android:gravity="center"
+        android:textColor="#ff4c75f1" />
+
+</LinearLayout>
