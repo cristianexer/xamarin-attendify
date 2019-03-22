@@ -54,7 +54,7 @@ namespace Attendify
         {
 
             Intent intent = new Intent(this, typeof(MenuActivity));
-            intent.PutExtra("status","");
+            intent.PutExtra("status","Attendance registerd");
             StartActivity(intent);
         }
     }
